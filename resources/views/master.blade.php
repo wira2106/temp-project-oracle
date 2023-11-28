@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="css/print.min.css">
     <link rel="stylesheet" href="css/pace-theme-default.min.css">
+    <link rel="stylesheet" href="{{asset('css/table-custom.css')}}">
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
 
     <!-- <script src="../resources/js/jquery.min.js"></script> -->
@@ -42,9 +43,9 @@
     <script src="js/dataTables.fixedColumns.min.js"></script>
     <script src="js/dataTables.fixedHeader.min.js"></script>
     <script src="js/dataTables.fixedHeader.min.js"></script>
-    <script src="js/Chart.min.js"></script>
+    <!-- <script src="js/Chart.min.js"></script>
     <script src="js/chart-area-demo.js"></script>
-    <script src="js/chart-pie-demo.js"></script>
+    <script src="js/chart-pie-demo.js"></script> -->
     <script src="js/sweatalert.js"></script>
     <script src="js/dataTables.buttons.min.js"></script>
     <script src="js/jszip.min.js"></script>
@@ -55,6 +56,7 @@
     <script src="js/jquery.number.min.js"></script>
     {{-- <script src="../resources/js/jquery.number.min.js.map"></script> --}}
     <script>
+         var link = "{{url('/')}}";
         setInterval(refreshToken, 3900000); // 65min
 
         function refreshToken() {
