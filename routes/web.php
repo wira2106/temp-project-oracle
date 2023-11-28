@@ -14,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/', function () {
+    // dd(Session::get('token'));
+    return view('master-alasan-pb-darurat.home');
+});
 //LOGIN
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', [LoginController::class, 'index']);
