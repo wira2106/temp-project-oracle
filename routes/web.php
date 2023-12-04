@@ -16,7 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', function () {
     // dd(Session::get('token'));
-    return view('master-alasan-pb-darurat.home');
+    return view('member-ho.menu.member');
+});
+Route::get('/member/data', function () {
+    // dd(Session::get('token'));
+    return view('member-ho.menu.member');
+});
+Route::get('/member/sms', function () {
+    // dd(Session::get('token'));
+    return view('member-ho.menu.member');
 });
 //LOGIN
 Route::post('/login', [LoginController::class, 'login']);
