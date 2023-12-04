@@ -15,10 +15,9 @@
                 <!--             Table            -->
                 <!-- ============================ -->
                 <div class="table-container">
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" id="table_alasan">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
                         <th scope="col">First Name</th>
                         <th scope="col">Last Name</th>
                         <th scope="col">Email</th>
@@ -26,118 +25,7 @@
                         </tr>
                     </thead>
                     <tbody id="table-content">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>john@example.com</td>
-                            <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
+                        
                     </tbody>
                     </table>
                 </div>
@@ -153,13 +41,19 @@
 
                         <label for="alasan_baru" class="col-sm-2">Alasan Dipilih</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alasan_dipilih" aria-describedby="emailHelp" readonly name="alasan_dipilih">
-                            <button type="button" class="close" id="reset_input" style="margin-top: -32px; margin-right:10px;">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                            <div class="input-group ">
+                                <input type="hidden" class="form-control" id="id_dipilih" aria-describedby="emailHelp" readonly name="id">
+                                <input type="text" class="form-control" id="alasan_dipilih" aria-describedby="emailHelp" readonly name="alasan_dipilih">
+                                <div class="input-group-append p-1" style="background-color: #EAECF4; border:1px solid #d1d3e2;border-radius:0 0.35rem 0.35rem 0;" id="reset_input">
+                                    <button type="button" class="close"  onclick="reset_alasan()">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>    
+
+                            <small id="error_alasan_dipilih" class="form-text text-muted hide">We'll never share your email with anyone else.</small>
                         </div>
 
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                         
                     </div>
                     <div class="form-groups row">
@@ -167,8 +61,8 @@
                         <label for="alasan_baru" class="col-sm-2">Alasan Baru</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" id="alasan_baru" aria-describedby="emailHelp" name="alasan_baru">
+                            <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
   
                     </div>
                     <div class="form-group">
@@ -181,12 +75,12 @@
                     </div>
                     <div class="d-flex justify-content-center">
                         <input type="hidden" class="text">
-                        <button onclick="add(this)" type="button" class="mr-1 btn btn-info">Add</button>
-                        <button onclick="update(this)" type="button" class="mr-1 btn btn-primary">Update</button>
-                        <button onclick="hapus(this)" type="button" class="mr-1 btn btn-danger">Delete</button>
+                        <button onclick="add(this)" type="button" class="mr-1 btn btn-info tambah" id="tambah">Add</button>
+                        <button onclick="update(this)" type="button" class="mr-1 btn btn-primary edit" id="edit">Update</button>
+                        <button onclick="hapus(this)" type="button" class="mr-1 btn btn-danger delete" id="delete">Delete</button>
                     </div>
                     <div class="d-flex justify-content-center mt-3">
-                        <button onclick="kirim(this)" type="button" class="btn btn-success mr-3" style="width: 80px;">Kirim</button>
+                        <button onclick="kirim(this)" type="button" class="btn btn-success mr-3 kirim" style="width: 80px;">Kirim</button>
                     </div>
                 </form>
                 <!-- ============================ -->
