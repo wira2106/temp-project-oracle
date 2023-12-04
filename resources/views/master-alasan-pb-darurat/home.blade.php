@@ -18,14 +18,35 @@
                     <table class="table table-bordered" id="table_alasan">
                     <thead>
                         <tr>
-                        <th scope="col">First Name</th>
-                        <th scope="col">Last Name</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">ALASAN</th>
                         <!-- Add more headers as needed -->
                         </tr>
                     </thead>
                     <tbody id="table-content">
-                        
+                        <tr>
+                            <td style="display: none;">1</td>
+                            <td>ALASAN 1</td>
+                        </tr>
+                        <tr>
+                            <td style="display: none;">2</td>
+                            <td>ALASAN 2</td>
+                        </tr>
+                        <tr>
+                            <td style="display: none;">3</td>
+                            <td>ALASAN 3</td>
+                        </tr>
+                        <tr>
+                            <td style="display: none;">4</td>
+                            <td>ALASAN 4</td>
+                        </tr>
+                        <tr>
+                            <td style="display: none;">5</td>
+                            <td>ALASAN 5</td>
+                        </tr>
+                        <tr>
+                            <td style="display: none;">6</td>
+                            <td>ALASAN 6</td>
+                        </tr>
                     </tbody>
                     </table>
                 </div>
