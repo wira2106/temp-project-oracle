@@ -5,136 +5,149 @@
 
     <div class="container-fluid">
         <div class="card-header">
-            Alasan PB Darurat
+           View Member
         </div>
         <div class="card shadow mb-4">
             <div class="card-body">
-               
-            <div class="container mt-4">
-                <!-- ============================ -->
-                <!--             Table            -->
-                <!-- ============================ -->
-                <div class="table-container">
-                    <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                        <th scope="col">Kode IGR</th>
-                        <th scope="col">Kode Member</th>
-                        <th scope="col">Nama Member</th>
-                        <th scope="col">Alamat Member</th>
-                        <!-- Add more headers as needed -->
-                        </tr>
-                    </thead>
-                    <tbody id="table-content">
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>13221</td>
-                            <td>RIO RISGIANO RK</td>
-                            <td>JL. KESATRIA,VII, NO. 32</td>
+                <div class="container mt-4">
+                    <!-- ============================ -->
+                    <!--             Table            -->
+                    <!-- ============================ -->
+                    <div class="table-container">
+                        <table class="table table-bordered" id="table_member">
+                        <thead>
+                            <tr>
+                            <th scope="col">Kode IGR</th>
+                            <th scope="col">Kode Member</th>
+                            <th scope="col">Nama Member</th>
+                            <th scope="col">Alamat Member</th>
+                            <!-- Add more headers as needed -->
+                            </tr>
+                        </thead>
+                        <tbody id="table-content">
+                            <tr>
+                                <td scope="row">01</td>
+                                <td>13221</td>
+                                <td>RIO RISGIANO RK</td>
+                                <td>JL. KESATRIA,VII, NO. 32</td>
+                                <!-- Add more rows as needed -->
+                            </tr>
                             <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>13221</td>
-                            <td>RIO RISGIANO RK</td>
-                            <td>JL. KESATRIA,VII, NO. 32</td>
+                            <tr>
+                                <td scope="row">01</td>
+                                <td>13222</td>
+                                <td>RIO RISGIANO RK</td>
+                                <td>JL. KESATRIA,VII, NO. 32</td>
+                                <!-- Add more rows as needed -->
+                            </tr>
                             <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>13221</td>
-                            <td>RIO RISGIANO RK</td>
-                            <td>JL. KESATRIA,VII, NO. 32</td>
+                            <tr>
+                                <th scope="row">01</th>
+                                <td>13221</td>
+                                <td>RIO RISGIANO RK</td>
+                                <td>JL. KESATRIA,VII, NO. 32</td>
+                                <!-- Add more rows as needed -->
+                            </tr>
                             <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>13221</td>
-                            <td>RIO RISGIANO RK</td>
-                            <td>JL. KESATRIA,VII, NO. 32</td>
+                            <tr>
+                                <th scope="row">01</th>
+                                <td>13221</td>
+                                <td>RIO RISGIANO RK</td>
+                                <td>JL. KESATRIA,VII, NO. 32</td>
+                                <!-- Add more rows as needed -->
+                            </tr>
                             <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                        <tr>
-                            <th scope="row">01</th>
-                            <td>13221</td>
-                            <td>RIO RISGIANO RK</td>
-                            <td>JL. KESATRIA,VII, NO. 32</td>
+                            <tr>
+                                <th scope="row">01</th>
+                                <td>13221</td>
+                                <td>RIO RISGIANO RK</td>
+                                <td>JL. KESATRIA,VII, NO. 32</td>
+                                <!-- Add more rows as needed -->
+                            </tr>
                             <!-- Add more rows as needed -->
-                        </tr>
-                        <!-- Add more rows as needed -->
-                    </tbody>
-                    </table>
-                </div>
-                <!-- ============================ -->
-                <!--         End Table            -->
-                <!-- ============================ -->
+                        </tbody>
+                        </table>
+                    </div>
+                    <!-- ============================ -->
+                    <!--         End Table            -->
+                    <!-- ============================ -->
+                    
                 
-                <!-- ============================ -->
-                <!--          Form                -->
-                <!-- ============================ -->
-                <form action="" method="post" class="mt-2" id="form_data">
-                    <div class="form-groups row mb-3">
 
-                        <label for="alasan_baru" class="col-sm-2">Alasan Dipilih</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alasan_dipilih" aria-describedby="emailHelp" readonly name="alasan_dipilih">
-                            <button type="button" class="close" id="reset_input" style="margin-top: -32px; margin-right:10px;">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-start">
+                                <input type="hidden" class="text">
+                                <button onclick="search()" type="button" data-toggle="modal" data-target="#modal_search" class="mr-1 btn btn-lg btn-info">Search</button>
+                                <button onclick="edit(this)" type="button" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
+                            </div>
                         </div>
-
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-                        
-                    </div>
-                    <div class="form-groups row">
-
-                        <label for="alasan_baru" class="col-sm-2">Alasan Baru</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="alasan_baru" aria-describedby="emailHelp" name="alasan_baru">
-                        </div>
-                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
-  
-                    </div>
-                    <div class="form-group">
-                        <div class="form-check">
-                        <!-- <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label> -->
+                        <div class="col-md-6">
+                            <div class="d-flex justify-content-end">
+                                <input type="hidden" class="text">
+                                <button onclick="alokasi(this)" type="button" class="mr-1 btn btn-lg btn-info">Alokasi</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center">
-                        <input type="hidden" class="text">
-                        <button onclick="add(this)" type="button" class="mr-1 btn btn-info">Add</button>
-                        <button onclick="update(this)" type="button" class="mr-1 btn btn-primary">Update</button>
-                        <button onclick="hapus(this)" type="button" class="mr-1 btn btn-danger">Delete</button>
-                    </div>
-                    <div class="d-flex justify-content-center mt-3">
-                        <button onclick="kirim(this)" type="button" class="btn btn-success mr-3" style="width: 80px;">Kirim</button>
-                    </div>
-                </form>
-                <!-- ============================ -->
-                <!--         End Form             -->
-                <!-- ============================ -->
+                    <!-- ============================ -->
+                    <!--             Modal Search     -->
+                    <!-- ============================ -->
+                    <div class="modal fade" id="modal_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <!-- <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><span class="title modal_title_user"></span></h5>
+                                </div> -->
+                                <div class="modal-body tambah_perhitungan" style="margin:0px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="user-profile text-left">
+                                                <div class="name text-black modal_title_form">Search</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="close  d-flex justify-content-right" data-dismiss="modal" aria-label="Close" onclick="resetForm()">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- ================================== -->
+                                    <!-- Modal Form Perhitungan             -->
+                                    <!-- ================================== -->
 
-                <div class="row mt-3">
-                    <div class="col-md-12">
-                    <label for="alasan_baru" class="d-flex justify-content-end">Cabang</label>
-                        <div class="progress">
-                            <div class="progress-bar bg-success w-0" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                <div class="persentase_progres">
-                                    <span class="angka_progres">0</span><span>%</span>
+                                    <form action="" method="post" class="form_data">
+                                        @csrf
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <p class="font-weight-light">Masukan Nama/ Kode yang ingin dicari</p>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Nama / Kode" id="datepicker" name="search" value=""/>
+                                                            <div class="search">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Button Submit -->
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-info px-4" type="submit">OK</button>
+                                                    <button class="btn btn-danger mr-2" data-dismiss="modal" type="button">Cancel</button>
+                                                </div>
+
+                                    </form>
+                                    <!-- ================================== -->
+                                    <!-- End Modal Form Perhitungan         -->
+                                    <!-- ================================== -->
+
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- ============================ -->
+                    <!--         End Modal Search     -->
+                    <!-- ============================ -->
+                    
                 </div>
-                
-            </div>
             </div>
         </div>
     </div>

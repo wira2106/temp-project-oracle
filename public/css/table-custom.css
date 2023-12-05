@@ -1,20 +1,30 @@
 /* styling table master-alasan pb darurat */
 .table-container {
-  max-height: 300px;
+  min-height: 500px;
   overflow-y: scroll;
+  border: ;
   }
+
   thead th {
-  position: sticky;
-  top: 0;
-  background-color: #f8f9fa; /* Add a background color for the sticky header */
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa; /* Add a background color for the sticky header */
   }
-  
+
   table {
-  border-collapse: collapse;
-  width: 100%;
+    border-collapse: collapse;
+    width: 100%;
   }
+
   th, td {
-  border: 1px solid #dee2e6; /* Add a border color for the cells */
-  padding: 8px;
-  text-align: left;
+    border: 1px solid #dee2e6; /* Add a border color for the cells */
+    padding: 8px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  /* selected data when clicked */
+  .selected-row {
+    background-color: #007bff;
+    color: #ffffff;
   }
