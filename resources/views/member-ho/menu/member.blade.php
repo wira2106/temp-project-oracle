@@ -79,7 +79,8 @@
                             <div class="d-flex justify-content-start">
                                 <input type="hidden" class="text">
                                 <button onclick="search()" type="button" data-toggle="modal" data-target="#modal_search" class="mr-1 btn btn-lg btn-info">Search</button>
-                                <button onclick="edit(this)" type="button" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
+                                <button onclick="edit(this)" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
+                                <button onclick="reset_selected()" type="button" class="mr-1 btn btn-lg btn-danger tombol_reset">Reset</button> 
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -102,11 +103,11 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="user-profile text-left">
-                                                <div class="name text-black modal_title_form">Search</div>
+                                                <div class="name text-black modal_title_form">Member Detail</div>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <button type="button" class="close  d-flex justify-content-right" data-dismiss="modal" aria-label="Close" onclick="resetForm()">
+                                            <button type="button" class="close  d-flex justify-content-right" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
@@ -145,6 +146,71 @@
                     </div>
                     <!-- ============================ -->
                     <!--         End Modal Search     -->
+                    <!-- ============================ -->
+                    <!-- ============================ -->
+                    <!--             Modal Edit       -->
+                    <!-- ============================ -->
+                    <div class="modal fade" id="modal_edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <!-- <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel"><span class="title modal_title_user"></span></h5>
+                                </div> -->
+                                <div class="modal-body tambah_perhitungan" style="margin:0px;">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="user-profile text-left">
+                                                <div class="name text-black modal_title_form">Member Detail</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="button" class="close  d-flex justify-content-right" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                
+                                    <!-- ================================== -->
+                                    <!-- Modal Form Perhitungan             -->
+                                    <!-- ================================== -->
+
+                                    <form action="" method="post" class="form_data">
+                                        @csrf
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label> Nama </label>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Nama / Kode" id="datepicker" name="search" value=""/>
+                                                            <div class="search">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label> Nama </label>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Nama / Kode" id="datepicker" name="search" value=""/>
+                                                            <div class="search">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Button Submit -->
+                                                <div class="d-flex justify-content-end">
+                                                    <button class="btn btn-info px-4" type="submit">Save</button>
+                                                    <button class="btn btn-danger mr-2" data-dismiss="modal" type="button">Cancel</button>
+                                                </div>
+
+                                    </form>
+                                    <!-- ================================== -->
+                                    <!-- End Modal Form Perhitungan         -->
+                                    <!-- ================================== -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================ -->
+                    <!--         End Modal Edit       -->
                     <!-- ============================ -->
                     
                 </div>
