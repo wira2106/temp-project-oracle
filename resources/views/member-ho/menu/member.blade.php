@@ -25,46 +25,7 @@
                             </tr>
                         </thead>
                         <tbody id="table-content">
-                            <tr>
-                                <td scope="row">01</td>
-                                <td>13221</td>
-                                <td>RIO RISGIANO RK</td>
-                                <td>JL. KESATRIA,VII, NO. 32</td>
-                                <!-- Add more rows as needed -->
-                            </tr>
-                            <!-- Add more rows as needed -->
-                            <tr>
-                                <td scope="row">01</td>
-                                <td>13222</td>
-                                <td>RIO RISGIANO RK</td>
-                                <td>JL. KESATRIA,VII, NO. 32</td>
-                                <!-- Add more rows as needed -->
-                            </tr>
-                            <!-- Add more rows as needed -->
-                            <tr>
-                                <th scope="row">01</th>
-                                <td>13221</td>
-                                <td>RIO RISGIANO RK</td>
-                                <td>JL. KESATRIA,VII, NO. 32</td>
-                                <!-- Add more rows as needed -->
-                            </tr>
-                            <!-- Add more rows as needed -->
-                            <tr>
-                                <th scope="row">01</th>
-                                <td>13221</td>
-                                <td>RIO RISGIANO RK</td>
-                                <td>JL. KESATRIA,VII, NO. 32</td>
-                                <!-- Add more rows as needed -->
-                            </tr>
-                            <!-- Add more rows as needed -->
-                            <tr>
-                                <th scope="row">01</th>
-                                <td>13221</td>
-                                <td>RIO RISGIANO RK</td>
-                                <td>JL. KESATRIA,VII, NO. 32</td>
-                                <!-- Add more rows as needed -->
-                            </tr>
-                            <!-- Add more rows as needed -->
+                             
                         </tbody>
                         </table>
                     </div>
@@ -79,7 +40,7 @@
                             <div class="d-flex justify-content-start">
                                 <input type="hidden" class="text">
                                 <button onclick="search()" type="button" data-toggle="modal" data-target="#modal_search" class="mr-1 btn btn-lg btn-info">Search</button>
-                                <button onclick="edit(this)" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
+                                <button onclick="edit()" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
                                 <button onclick="reset_selected()" type="button" class="mr-1 btn btn-lg btn-danger tombol_reset">Reset</button> 
                             </div>
                         </div>
@@ -178,24 +139,310 @@
                                         @csrf
                                                 <div class="row pt-md-4">
                                                     <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label> Nama </label>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Nama / Kode" id="datepicker" name="search" value=""/>
-                                                            <div class="search">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kode Cabang</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kode_cabang">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label> Nama </label>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Nama / Kode" id="datepicker" name="search" value=""/>
-                                                            <div class="search">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Alamat Surat</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="alamat_surat">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kode Member</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kode_member">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kota</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kota">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Nama</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="nama">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kelurahan</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kelurahan">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">No. KTP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="no_ktp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kode pos</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kode_pos">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Alamat KTP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="alamat_ktp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">No. HP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="no_hp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                            <label for="alasan_baru" class="col-sm-4">Tgl Lahir</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="tgl_lahir">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kota KTP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kota_ktp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Jenis Outlet</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="jenis_outlet">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kelurahan KTP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kelurahan_ktp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">SubOutlet</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="sub_outlet">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kode Pos KTP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kode_pos_ktp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">PKP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="pkp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                            <label for="alasan_baru" class="col-sm-4">Area</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="area">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Telepon</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="telepon">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Kredit</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="kredit">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                            <label for="alasan_baru" class="col-sm-4">TOP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="top">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Jenis Cust</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="jenis_cust">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Bebas Iuran</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="bebas_iuran">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Retail Khusus</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="retail_khusus">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Ganti Kartu</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="ganti_kartu">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Jarak</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="jarak">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Limit</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="limit">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">NPWP</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="npwp">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Blocking Pengiriman</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="blocking_pengiriman">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Salesman</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="salesman">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="row pt-md-4">
+                                                    <div class="col-md-6">
+                                                        <div class="form-groups row">
+                                                            <label for="alasan_baru" class="col-sm-4">Alamat Email</label>
+                                                            <div class="col-sm-8">
+                                                                <input type="text" class="form-control form-control-sm"  name="alamat_email">
+                                                                <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Button Submit -->
-                                                <div class="d-flex justify-content-end">
+                                                <div class="d-flex justify-content-end mt-2">
                                                     <button class="btn btn-info px-4" type="submit">Save</button>
                                                     <button class="btn btn-danger mr-2" data-dismiss="modal" type="button">Cancel</button>
                                                 </div>

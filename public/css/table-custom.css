@@ -1,6 +1,6 @@
 /* styling table master-alasan pb darurat */
 .table-container {
-  min-height: 500px;
+  max-height: 200px;
   overflow-y: scroll;
   border: ;
   }
