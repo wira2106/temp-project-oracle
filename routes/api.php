@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/member/data', [MemberController::class, 'view']);
+Route::get('/member/data/cabang', [MemberController::class, 'getDataCabang']);

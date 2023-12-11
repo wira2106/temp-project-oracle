@@ -31,7 +31,7 @@
        
         <div id="collapseMember" class="collapse {{ (request()->is('*member*')) ? 'show' : '' }}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item collapse-item-store-setting {{ (request()->is('*data*')) ? 'active' : '' }}" href="{{ url('/member/data') }}"> Member</a>
+                <a class="collapse-item collapse-item-store-setting {{ (request()->is('*list*')) ? 'active' : '' }}" href="{{ url('/member/list') }}"> Member</a>
                 <a class="collapse-item collapse-item-royalti {{ (request()->is('*sms*')) ? 'active' : '' }}" href="{{ url('/member/sms') }}">SMS</a>
             </div>
         </div>

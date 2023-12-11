@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MemberController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,12 +25,14 @@ Route::get('/member/data', function () {
 });
 Route::get('/member/sms', function () {
     // dd(Session::get('token'));
-    return view('member-ho.menu.member');
+    return view('member-ho.menu.sms');
 });
 //LOGIN
 Route::post('/login', [LoginController::class, 'login']);
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::get('/member/list', [MemberController::class, 'index']);
 
 Route::middleware(['mylogin'])->group(function () {
     //HOME

@@ -211,12 +211,7 @@
                                                         <div class="form-groups row">
                                                             <label for="alasan_baru" class="col-sm-4">Kode Cabang</label>
                                                             <div class="col-sm-8">
-                                                            <div class="form-group">
-                                                                <select id="kode_cabang" class="form-control select2" name="kode_cabang">
-                                                                    <option value="" disabled selected>Pilih Cabang</option>
-                                                                
-                                                                </select>
-                                                            </div>
+                                                                <input type="text" class="form-control form-control-sm"  name="kode_cabang">
                                                                 <!-- <small id="error_alasan_baru" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                             </div>
                                                         </div>
@@ -539,7 +534,7 @@
         </div>
     </div>
 
-    <script src="{{asset('js/app-member-ho.js')}}"></script>
+    <script src="{{asset('js/app-member-sms.js')}}"></script>
     <script src="{{asset('js/app-submitForm.js')}}"></script>
     <script src="{{asset('js/app-submitForm2.js')}}"></script>
     <script src="{{asset('js/app-hapus.js')}}"></script>

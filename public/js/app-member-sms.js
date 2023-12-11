@@ -1,11 +1,9 @@
 let selectedTable,
     selectedData  =  [],
     dataMember =[],
-    listCabang = [],
     search  =  false,
     page = 1,
-    field = null,
-    cabang = null;
+    field = null;
 
 $(document).ready(function(){
 
@@ -42,21 +40,7 @@ $(document).ready(function(){
 
 view =(search = null)=>{
    reset_selected();
-
-   let select = "";
    $.getJSON(link + "/api/member/data?search"+search+"&page="+page, function(data) {
-      
-      // list select cabang
-      if(data.dataCabang){
-         $.each(data.dataCabang,function(key,value){
-             select+=` <option value="${value.id}" >${value.cabang}</option>`;
-             listCabang[value.id] = value;
-
-         });
-         $("#kode_cabang").append(select);
-     }
-
-     // list data member
       $.each(data.data,function(key,value) {
          field+=`
                   <tr>
@@ -71,6 +55,7 @@ view =(search = null)=>{
    }).done(function() {
       $("#table-content").html(field);
       page++
+      console.log(dataMember);
    }); 
 
 }
@@ -79,7 +64,7 @@ edit =()=>{
       let data = selectedData;
       
       $('#form_data').attr('action',link+'/api/add');
-      $("select[name='kode_cabang']").val(data.kode_cabang)
+      $("input[name='kode_cabang']").val(data.kode_cabang)
       $("input[name='alamat_surat']").val(data.alamat_surat)
       $("input[name='kode_member']").val(data.kode_member)
       $("input[name='kota']").val(data.kota)

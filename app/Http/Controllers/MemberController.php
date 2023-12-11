@@ -3,19 +3,28 @@
 namespace App\Http\Controllers;
 
 use App\Transformers\DataMemberTransformers;
+use App\Transformers\DataSMSTransformers;
 use Illuminate\Http\Request;
 use Faker\Factory as Faker;
 
 class MemberController extends Controller
 {
     public function index(){
-
+        return view('member-ho.menu.member');
     }
+    
 
     public function view(Request $request){
+        // dd($request->all());
         $data_member = [];
+        $page_start = 1;
+        $page_end = $request->page*10;
+
+        if($request->page > 1){
+            $page_start = $page_end - 9;
+        }
         $faker = Faker::create('id_ID');
-        for ($i = 1; $i <= 60; $i++) {
+        for ($i = $page_start; $i <= $page_end; $i++) {
             $firstName = $faker->firstName;
             $lastName = $faker->lastName;
             $name = strtoupper($firstName . " " . $lastName);
@@ -66,7 +75,22 @@ class MemberController extends Controller
 
         }
 
-        return DataMemberTransformers::collection($data_member);
+        return DataMemberTransformers::collection($data_member)->additional([
+            "dataCabang" => $this->getDataCabang()
+        ]);
 
+    }
+
+    public function getDataCabang(){
+        $cabang = [];
+        $listCabang = [];
+        for ($i = 1; $i <= 60; $i++) {
+            $cabang[] = (object)[
+                "id" => $i,
+                "cabang" =>"INDOMARCO ($i)",
+            ];
+        }
+        $listCabang = DataSMSTransformers::collection($cabang);
+        return $listCabang;
     }
 }

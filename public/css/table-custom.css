@@ -1,8 +1,7 @@
 /* styling table master-alasan pb darurat */
 .table-container {
-  max-height: 200px;
+  max-height: 460px;
   overflow-y: scroll;
-  border: ;
   }
 
   thead th {
@@ -28,3 +27,16 @@
     background-color: #007bff;
     color: #ffffff;
   }
+
+.select2-container--default.select2-container--open {
+    border-color: #007bff;
+    width: 100% !important;
+}
+.select2-container {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 100% !important;
+}

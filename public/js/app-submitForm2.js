@@ -1,6 +1,7 @@
 $('.form_data').submit(function (e) {
     e.preventDefault();
     let form = $('.form_data'),
+        text = $('.text').val()?$('.text').val():'Apakah Anda ingin Menyimpan Data Ini?',
         url = form.attr('action'),
         method = form.attr('method') == undefined ? 'PUT' : 'POST',
         redirect = $("input[name='redirect']").val(),
@@ -8,7 +9,7 @@ $('.form_data').submit(function (e) {
     form.find('.form-control').removeClass('is-invalid');
     form.find('.help-block').remove();
     Swal.fire({
-        title: 'Apakah Anda ingin Menyimpan Data Ini?',
+        title: $text,
         showDenyButton: true,
         showCancelButton: true,
         confirmButtonText: `Ya`,
