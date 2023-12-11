@@ -22,10 +22,18 @@
     <link rel="stylesheet" href="{{asset('css/print.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/pace-theme-default.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/table-custom.css')}}">
+    <!-- CSS Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- CSS Select2 End -->
+
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
 
     <!-- <script src="../resources/js/jquery.min.js"></script> -->
     <!-- <script src="../resources/js/jquery-3.5.1.js"></script> -->
+
+    <!-- JS Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- JS Select2 End -->
     <script src="{{asset('js/jquery-3.3.1.min.js')}}"></script>
     <script src="{{asset('js/popper.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
