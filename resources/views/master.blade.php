@@ -22,15 +22,19 @@
     <link rel="stylesheet" href="{{asset('css/print.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/pace-theme-default.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/table-custom.css')}}">
+
     <!-- CSS Select2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- CSS Select2 End -->
-
+    <!-- CSS Loading -->
+    <link rel="stylesheet" href="{{url('assets/js/jquery-loading-master/src/loading.css')}}" type="text/css">
     <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"> -->
 
     <!-- <script src="../resources/js/jquery.min.js"></script> -->
     <!-- <script src="../resources/js/jquery-3.5.1.js"></script> -->
 
+    <!-- JS loading -->
+    <script src="{{asset('assets/js/jquery-loading-master/src/loading.js')}}"></script>
     <!-- JS Select2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- JS Select2 End -->
@@ -78,6 +82,11 @@
             });
         }
     </script>
+
+    <!-- JS loading -->
+    <script src="{{url('assets/js/jquery-loading-master/src/loading.js')}}"></script>
+    <!-- JS Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- <script>
         $(document).ready(function() {
             $("#sidebarToggle").click(function() {

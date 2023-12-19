@@ -14,13 +14,14 @@
                     <!--             Table            -->
                     <!-- ============================ -->
                     <div class="table-container" id="scrollContainer">
-                        <table class="table table-bordered" id="table_member">
+                        <table class="table table-bordered" id="table_cabang">
                         <thead>
                             <tr>
-                            <th scope="col">Kode IGR</th>
-                            <th scope="col">Kode Member</th>
-                            <th scope="col">Nama Member</th>
-                            <th scope="col">Alamat Member</th>
+                            <th scope="col">Cabang</th>
+                            <th scope="col">Kode</th>
+                            <th scope="col">Nama SMS</th>
+                            <th scope="col">Tgl Awal</th>
+                            <th scope="col">Tgl Akhir</th>
                             <!-- Add more headers as needed -->
                             </tr>
                         </thead>
@@ -39,15 +40,16 @@
                         <div class="col-md-6">
                             <div class="d-flex justify-content-start">
                                 <input type="hidden" class="text">
-                                <button onclick="pencarian()" type="button" data-toggle="modal" data-target="#modal_search" class="mr-1 btn btn-lg btn-info">Search</button>
-                                <button onclick="edit()" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-default tombol_edit">Edit</button> 
+                                <button onclick="tambah()" type="button" data-toggle="modal" data-target="#modal_search" class="mr-1 btn btn-lg btn-info">Tambah</button>
+                                <button onclick="edit()" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-info tombol_edit">Edit</button> 
+                                <button onclick="hapus()" type="button" data-toggle="modal" data-target="#modal_edit" class="mr-1 btn btn-lg btn-info tombol_hapus">Hapus</button> 
                                 <button onclick="reset_selected()" type="button" class="mr-1 btn btn-lg btn-danger tombol_reset">Reset</button> 
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="d-flex justify-content-end">
                                 <input type="hidden" class="text">
-                                <button onclick="alokasi(this)" type="button" class="mr-1 btn btn-lg btn-info"  data-toggle="modal" data-target="#modal_alokasi" >Alokasi</button>
+                                <button onclick="alokasi(this)" type="button" class="mr-1 btn btn-lg btn-info"  data-toggle="modal" data-target="#modal_alokasi" >CSV</button>
                             </div>
                         </div>
                     </div>

@@ -12,6 +12,9 @@ $(document).ready(function(){
    $('.tombol_edit').prop('disabled',true);
    $('.tombol_reset').hide();
    view();
+//    $('.select2').select2({
+//       allowClear: true
+//   }); 
    
    $('#table_member tbody').on('click', 'tr', function () {
         // Remove the 'selected-row' class from all rows
@@ -43,7 +46,10 @@ $(document).ready(function(){
 view =(search = null)=>{
    reset_selected();
 
+   $('#table_member tbody').loading('toggle');
+
    let select = "";
+       listCabang = [];
    $.getJSON(link + "/api/member/data?search"+search+"&page="+page, function(data) {
       
       // list select cabang
@@ -69,6 +75,8 @@ view =(search = null)=>{
                dataMember[value.kode_member] = value;
       });
    }).done(function() {
+
+      $('#table_member tbody').loading('toggle');
       $("#table-content").html(field);
       page++
    }); 

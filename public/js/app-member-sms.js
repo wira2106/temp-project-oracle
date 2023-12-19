@@ -1,6 +1,6 @@
 let selectedTable,
     selectedData  =  [],
-    dataMember =[],
+    dataSms =[],
     search  =  false,
     page = 1,
     field = null;
@@ -8,12 +8,14 @@ let selectedTable,
 $(document).ready(function(){
 
    $('.tombol_edit').prop('disabled',true);
+   $('.tombol_hapus').prop('disabled',true);
    $('.tombol_reset').hide();
    view();
    
-   $('#table_member tbody').on('click', 'tr', function () {
+   $('#table_cabang tbody').on('click', 'tr', function () {
+         console.log('masuk');
         // Remove the 'selected-row' class from all rows
-        $('#table_member tbody tr').removeClass('selected-row');
+        $('#table_cabang tbody tr').removeClass('selected-row');
 
         // Add the 'selected-row' class to the clicked row
         $(this).addClass('selected-row');
@@ -25,6 +27,7 @@ $(document).ready(function(){
         
         selectedValue(selectedTable[1]);
         $('.tombol_edit').prop('disabled',false);
+        $('.tombol_hapus').prop('disabled',false);
         $('.tombol_reset').show();
       //   selectedValue(selectedData[0],selectedData[1]);
     });
@@ -40,22 +43,23 @@ $(document).ready(function(){
 
 view =(search = null)=>{
    reset_selected();
-   $.getJSON(link + "/api/member/data?search"+search+"&page="+page, function(data) {
+   $.getJSON(link + "/api/member/sms/data?search"+search+"&page="+page, function(data) {
       $.each(data.data,function(key,value) {
          field+=`
                   <tr>
-                        <td scope="row">${value.kode_cabang}</td>
-                        <td>${value.kode_member}</td>
-                        <td>${value.nama}</td>
-                        <td>${value.alamat_ktp}</td>
+                        <td scope="row">${value.cabang}</td>
+                        <td>${value.kode}</td>
+                        <td>${value.nama_sms}</td>
+                        <td>${value.awal_tgl}</td>
+                        <td>${value.akhir_tgl}</td>
                   </tr>
                `;
-               dataMember[value.kode_member] = value;
+               dataSms[value.kode_cabang] = value;
       });
    }).done(function() {
       $("#table-content").html(field);
       page++
-      console.log(dataMember);
+      console.log(dataSms);
    }); 
 
 }
@@ -114,13 +118,14 @@ pencarian=()=>{
 }
 
 selectedValue =(kode_member)=>{
-   selectedData  = dataMember[kode_member];
+   selectedData  = dataSms[kode_member];
 }
 
 reset_selected=()=>{
    selectedData  =  [];
    $('.tombol_edit').prop('disabled',true);
-   $('#table_member tbody tr').removeClass('selected-row');
+   $('.tombol_hapus').prop('disabled',true);
+   $('#table_cabang tbody tr').removeClass('selected-row');
    $('.tombol_reset').hide();
    if (search) {
       view();

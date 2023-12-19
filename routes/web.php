@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\SMSController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {
-    // dd(Session::get('token'));
+    dd(phpinfo());
     return view('member-ho.menu.member');
 });
 Route::get('/member/data', function () {
@@ -33,6 +34,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::get('/member/list', [MemberController::class, 'index']);
+Route::get('/member/sms/list', [SMSController::class, 'index']);
 
 Route::middleware(['mylogin'])->group(function () {
     //HOME

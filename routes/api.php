@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\SMSController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/member/data', [MemberController::class, 'view']);
-Route::get('/member/data/cabang', [MemberController::class, 'getDataCabang']);
+Route::get('/member/sms/data', [SMSController::class, 'view']);
